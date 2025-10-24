@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portofolio</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+</head>
+<script>
+  document.querySelector('.men').addEventListener('change', function() {
+    const sectionId = this.value;
+    if (sectionId) {
+      document.getElementById(sectionId)?.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
+      // Remet le menu sur "Menu" après la sélection
+      setTimeout(() => {
+        this.selectedIndex = 0;
+      }, 500);
+    }
+  });
+</script>
+<body>
+    <video autoplay loop muted playsinline class="background-clip" preload="auto">
+        <source src="style/7235000-uhd_3840_2160_30fps.mp4" type="video/mp4">
+    </video>
+    <div>
+        <div class="container">
+            <h2 class="title"> PEREIRA ZOE </h2>
+                <div class="menu">
+                    <label for="menu"></label>
+                        <select name="men" class="men" id="menu">
+                            <option class="choix" value="">Menu</option>
+                            <option class="choix" value="home">Home</option>
+                            <option class="choix" value="about">About</option>
+                            <option class="choix" value="work">Work</option>
+                            <option class="choix" value="contact">Contact</option>
+                        </select>
+                </div>
+            <h2 class="resume"> RESUME </h2>
+        </div>
+    </div>
+    <div>
+        <div class="titre">
+            <br><br><br><br>
+            <p class="pass"> PASSIONATE </p>
+            <p class="dev"> DEVELOPPER </p>
+        </div>
+
+        <section id="home">
+            <h3 class="about"> ABOUT ME</h3>
+            <p class="txtaboutme"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque nisi sunt voluptatum sed impedit earum fuga voluptas officia, nam velit nihil dolor nemo accusantium blanditiis odio eligendi debitis quod ut?
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima fugit error odio assumenda nulla possimus vitae dolorum deleniti cupiditate illo? Repellendus animi accusamus libero soluta quibusdam commodi molestias quas voluptatem.
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis accusantium assumenda sequi ab itaque iste quasi facilis corporis dolor adipisci officiis quia alias nemo, distinctio necessitatibus asperiores quidem quod ea?
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam quo atque architecto doloremque tempore quis porro beatae soluta alias harum, perspiciatis aperiam deleniti, animi nulla quaerat fugit ex culpa fuga?
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis tempore explicabo reprehenderit ipsam recusandae saepe commodi omnis magni, molestias magnam hic ducimus repellat aperiam! Voluptatem pariatur expedita deserunt dolor sit!
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis doloribus reprehenderit inventore dicta excepturi fugiat illum temporibus aperiam maiores architecto incidunt culpa, voluptates consequatur quas quisquam cum! At, molestiae provident?
+            </p>
+           
+  <!-- Ton contenu -->
+            </section>
+
+        <section id="about">
+            
+  <!-- Ton contenu -->
+            </section>
+
+        <section id="work">
+
+  <!-- Ton contenu -->
+        </section>
+
+        <section id="contact">
+            
+  <!-- Ton contenu -->
+        </section>
+    </div>
+</body>
+</html>
