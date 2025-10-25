@@ -9,21 +9,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
 </head>
-<script>
-  document.querySelector('.men').addEventListener('change', function() {
-    const sectionId = this.value;
-    if (sectionId) {
-      document.getElementById(sectionId)?.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
-      });
-      // Remet le menu sur "Menu" après la sélection
-      setTimeout(() => {
-        this.selectedIndex = 0;
-      }, 500);
-    }
-  });
-</script>
 <body>
     <video autoplay loop muted playsinline class="background-clip" preload="auto">
         <source src="style/7235000-uhd_3840_2160_30fps.mp4" type="video/mp4">
@@ -31,19 +16,20 @@
     <div>
         <div class="container">
             <h2 class="title"> PEREIRA ZOE </h2>
-                <div class="menu">
-                    <label for="menu"></label>
-                        <select name="men" class="men" id="menu">
-                            <option class="choix" value="">Menu</option>
-                            <option class="choix" value="home">Home</option>
-                            <option class="choix" value="about">About</option>
-                            <option class="choix" value="work">Work</option>
-                            <option class="choix" value="contact">Contact</option>
-                        </select>
-                </div>
+            <div class="menu">
+                <label for="menu"></label>
+                <select name="men" class="men" id="menu">
+                    <option class="choix" value="">Menu</option>
+                    <option class="choix" value="home">Home</option>
+                    <option class="choix" value="about">About</option>
+                    <option class="choix" value="work">Work</option>
+                    <option class="choix" value="contact">Contact</option>
+                </select>
+            </div>
             <h2 class="resume"> RESUME </h2>
         </div>
     </div>
+    
     <div>
         <div class="titre">
             <br><br><br><br>
@@ -60,24 +46,42 @@
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis tempore explicabo reprehenderit ipsam recusandae saepe commodi omnis magni, molestias magnam hic ducimus repellat aperiam! Voluptatem pariatur expedita deserunt dolor sit!
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis doloribus reprehenderit inventore dicta excepturi fugiat illum temporibus aperiam maiores architecto incidunt culpa, voluptates consequatur quas quisquam cum! At, molestiae provident?
             </p>
-           
-  <!-- Ton contenu -->
-            </section>
-
-        <section id="about">
-            
-  <!-- Ton contenu -->
-            </section>
+        </section>
 
         <section id="work">
-
-  <!-- Ton contenu -->
+            <h3 class="work-title">MY CODING LANGUAGES SET :</h3>
+            <div class="slider-container">
+                <div class="slider">
+                    <div class="card">
+                        <h4>HTML 5</h4>
+                        <p>Description du premier projet</p>
+                    </div>
+                    <div class="card">
+                        <h4>CSS</h4>
+                        <p>Description du deuxième projet</p>
+                    </div>
+                    <div class="card">
+                        <h4>JAVASCRIPT</h4>
+                        <p>Description du troisième projet</p>
+                    </div>
+                    <div class="card">
+                        <h4>Projet 4</h4>
+                        <p>Description du quatrième projet</p>
+                    </div>
+                </div>
+            </div>
+            <!-- IMPORTANT : Les boutons sont ICI, en dehors de slider-container -->
+            <div class="slider-buttons">
+                <button class="prev">←</button>
+                <button class="next">→</button>
+            </div>
         </section>
 
         <section id="contact">
-            
-  <!-- Ton contenu -->
+            <!-- Ton contenu contact -->
         </section>
     </div>
+
+    <script src="./script.js"></script>
 </body>
 </html>
